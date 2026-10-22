@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@source "./**/*.{js,ts,jsx,tsx}";
+@source "../components/**/*.{js,ts,jsx,tsx}";
+@plugin "daisyui" {
+  themes: violeta --default;
+}
+@plugin "daisyui/theme" {
+  name: "violeta";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: oklch(98.5% 0.012 310);
+  --color-base-200: oklch(95.5% 0.025 308);
+  --color-base-300: oklch(91% 0.04 306);
+  --color-base-content: oklch(28% 0.06 300);
+  --color-primary: oklch(52% 0.22 302);
+  --color-primary-content: oklch(98% 0.01 310);
+  --color-secondary: oklch(68% 0.14 328);
+  --color-secondary-content: oklch(24% 0.06 328);
+  --color-accent: oklch(74% 0.11 286);
+  --color-accent-content: oklch(24% 0.05 286);
+  --color-neutral: oklch(32% 0.06 300);
+  --color-neutral-content: oklch(97% 0.01 310);
+  --color-info: oklch(62% 0.12 262);
+  --color-info-content: oklch(98% 0.01 262);
+  --color-success: oklch(64% 0.13 162);
+  --color-success-content: oklch(98% 0.01 162);
+  --color-warning: oklch(80% 0.13 85);
+  --color-warning-content: oklch(30% 0.06 70);
+  --color-error: oklch(60% 0.2 18);
+  --color-error-content: oklch(98% 0.01 18);
+  --radius-selector: 1rem;
+  --radius-field: 0.9rem;
+  --radius-box: 1.4rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 420px at -10% -10%, oklch(86% 0.09 310 / 0.85), transparent 60%),
+    radial-gradient(700px 380px at 110% 0%, oklch(88% 0.07 286 / 0.75), transparent 55%),
+    radial-gradient(600px 320px at 50% 110%, oklch(90% 0.05 328 / 0.5), transparent 50%),
+    var(--color-base-200);
+}
+
+h1,
+h2,
+h3,
+.card-title,
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+  letter-spacing: -0.03em;
+}
+
+.card,
+.stats,
+.timeline-box,
+.modal-box {
+  border: 1px solid color-mix(in oklch, var(--color-primary) 16%, transparent);
+  box-shadow: 0 24px 50px -32px color-mix(in oklch, var(--color-primary) 65%, transparent);
+}
+
+.card,
+.modal-box {
+  background-color: color-mix(in oklch, var(--color-base-100) 90%, transparent);
+  backdrop-filter: blur(16px);
+}
+
+.navbar {
+  background: color-mix(in oklch, var(--color-base-100) 72%, transparent);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid color-mix(in oklch, var(--color-primary) 14%, transparent);
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.35rem;
+  width: 100%;
+}
+
+.form-control > .label {
+  display: flex;
+  width: 100%;
+  white-space: normal;
+  color: var(--color-base-content);
+  padding: 0;
+}
+
+.label-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.gallery-input {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.input.w-full,
+.select.w-full,
+.textarea.w-full,
+.file-input.w-full {
+  width: 100%;
+  max-width: 100%;
+}
