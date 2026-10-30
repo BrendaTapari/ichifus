@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: "Ichifus",
     template: "%s · Ichifus",
   },
-  description: "Historial clínico veterinario para mascotas",
+  description: "Registro veterinario de seguimiento para mascotas",
   applicationName: "Ichifus",
   appleWebApp: {
     capable: true,
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
       { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],

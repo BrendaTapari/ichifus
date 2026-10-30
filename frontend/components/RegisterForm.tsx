@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import Field from "@/components/Field";
+import Logo from "@/components/Logo";
 import GoogleSignIn from "@/components/GoogleSignIn";
 import TermsConsent from "@/components/TermsConsent";
 import { api } from "@/lib/api";
@@ -65,7 +66,10 @@ export default function RegisterForm() {
     <main className="mx-auto flex min-h-screen w-full max-w-md items-center px-4 py-8">
       <div className="card w-full bg-base-100 shadow-xl">
         <form className="card-body gap-3" onSubmit={onSubmit}>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Ichifus</p>
+          <Link href="/" className="flex items-center gap-2">
+            <Logo className="h-10 w-10" />
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Ichifus</span>
+          </Link>
           <h1 className="text-4xl">Crear cuenta</h1>
           <p className="text-sm opacity-70">Registrate para llevar el historial de tus mascotas.</p>
           {error && <div className="alert alert-error text-sm">{error}</div>}

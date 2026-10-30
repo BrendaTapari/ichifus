@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import Field from "@/components/Field";
+import Logo from "@/components/Logo";
 import GoogleSignIn from "@/components/GoogleSignIn";
 import TermsConsent from "@/components/TermsConsent";
 import { api } from "@/lib/api";
@@ -94,6 +95,10 @@ export default function InviteAccept({ token }: { token: string }) {
     <main className="mx-auto flex min-h-screen w-full max-w-md items-center px-4 py-8">
       <div className="card w-full bg-base-100 shadow-xl">
         <div className="card-body gap-3">
+          <Link href="/" className="flex items-center gap-2">
+            <Logo className="h-10 w-10" />
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Ichifus</span>
+          </Link>
           <h1 className="card-title text-2xl">Compartamos tenencia</h1>
           {loading ? (
             <div className="flex justify-center py-8">

@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import Logo from "@/components/Logo";
+
 export const metadata = {
   title: "Términos y condiciones",
 };
@@ -9,7 +11,10 @@ export default function TermsPage() {
     <main className="mx-auto min-h-screen w-full max-w-2xl px-5 py-10">
       <article className="card bg-base-100 shadow-xl">
         <div className="card-body gap-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Ichifus</p>
+          <Link href="/" className="flex items-center gap-2">
+            <Logo className="h-10 w-10" />
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Ichifus</span>
+          </Link>
           <h1 className="text-4xl">Términos y condiciones</h1>
           <p className="text-sm opacity-70">Vigentes desde octubre de 2026.</p>
 

@@ -1,3 +1,4 @@
+import Logo from "@/components/Logo";
 import PhotoCarousel from "@/components/PhotoCarousel";
 import { extractPhone, formatAge, telUrl, whatsappUrl } from "@/lib/format";
 import type { PublicPet } from "@/lib/types";
@@ -64,6 +65,10 @@ export default function PublicPetCard({ pet }: { pet: PublicPet }) {
             )}
           </div>
         )}
+        <p className="flex items-center gap-2 pt-1 text-xs opacity-60">
+          <Logo className="h-5 w-5" />
+          Ichifus
+        </p>
       </div>
     </article>
   );
